@@ -1,0 +1,33 @@
+import RPi.GPIO as GPIO
+import time
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(14,GPIO.OUT)
+GPIO.setup(15,GPIO.OUT)
+GPIO.setup(18,GPIO.OUT)
+GPIO.setup(23,GPIO.OUT)
+while True:
+    #to move forward
+    GPIO.output(14,GPIO.HIGH)
+    GPIO.output(15,GPIO.LOW)
+    GPIO.output(18,GPIO.HIGH)
+    GPIO.output(23,GPIO.LOW)
+    time.sleep(5)
+    #to move backward
+    GPIO.output(14,GPIO.LOW)
+    GPIO.output(15,GPIO.HIGH)
+    GPIO.output(18,GPIO.LOW)
+    GPIO.output(23,GPIO.HIGH)
+    time.sleep(1)
+    #to move left
+    GPIO.output(14,GPIO.LOW)
+    GPIO.output(15,GPIO.LOW)
+    GPIO.output(18,GPIO.HIGH)
+    GPIO.output(23,GPIO.LOW)
+    time.sleep(1)
+     #to move right
+     GPIO.output(14,GPIO.HIGH)
+    GPIO.output(15,GPIO.LOW)
+    GPIO.output(18,GPIO.low)
+    GPIO.output(23,GPIO.LOW)
+    time.sleep(1)
+    
