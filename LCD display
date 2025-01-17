@@ -1,0 +1,6 @@
+import smbus
+from RPLCD.i2c import 
+lcd=CharLCD('PCF8574',0x27,16,2)
+lcd.write_string("Hello World!")
+lcd.cursor_pos=(1,0)
+lcd.write_string("Raspberry pi")
